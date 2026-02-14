@@ -1,6 +1,6 @@
 import { IsString, IsIn, IsInt, IsBoolean } from 'class-validator';
 
-export class CreateCandidateDto {
+export class CandidateDto {
   @IsString()
   name: string;
 
