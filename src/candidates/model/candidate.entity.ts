@@ -35,7 +35,7 @@ export enum candidateExcelColumns {
 
 export type Seniority = 'junior' | 'senior';
 
-const seniorities = ['junior', 'senior'];
+export const seniorities = ['junior', 'senior'];
 
 export function isSeniority(
   candidateSeniority: string,

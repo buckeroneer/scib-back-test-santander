@@ -1,3 +1,4 @@
+import { seniorities } from '@candidates/model/candidate.entity';
 import { IsString, IsIn, IsInt, IsBoolean } from 'class-validator';
 
 export class CandidateDto {
@@ -7,7 +8,7 @@ export class CandidateDto {
   @IsString()
   surname: string;
 
-  @IsIn(['junior', 'senior'])
+  @IsIn(seniorities)
   seniority: 'junior' | 'senior';
 
   @IsInt()
