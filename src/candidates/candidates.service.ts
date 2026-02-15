@@ -66,8 +66,7 @@ export class CandidatesService {
       cadidateProfessionalData[candidateExcelColumns.YEARS_OF_EXPERIENCE];
     const availability =
       cadidateProfessionalData[candidateExcelColumns.AVAILABILITY];
-
-    if (isSeniority(seniority)) {
+    if (!isSeniority(seniority)) {
       throw new BadRequestException('Seniority must be junior or senior');
     }
 

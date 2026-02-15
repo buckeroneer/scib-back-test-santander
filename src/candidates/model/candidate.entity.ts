@@ -12,7 +12,7 @@ export class Candidate {
   surname: string;
 
   @Column()
-  seniority: 'junior' | 'senior';
+  seniority: Seniority;
 
   @Column('int')
   years: number;
@@ -30,7 +30,7 @@ export interface CandidateProfessionalData {
 export enum candidateExcelColumns {
   SENIORITY = 'Seniority',
   YEARS_OF_EXPERIENCE = 'Years of Experience',
-  AVAILABILITY = 'Avaliability',
+  AVAILABILITY = 'Availability',
 }
 
 export type Seniority = 'junior' | 'senior';
