@@ -13,10 +13,16 @@ async function bootstrap() {
   // Enable CORS
   app.enableCors({
     origin: [
-      'http://localhost:4200', // local dev
-      'https://buckeroneer.github.io/scib-front-test-santander', // deployment
+      'http://localhost:4200',
+      'http://localhost:4200/',
+      'https://buckeroneer.github.io',
+      'https://buckeroneer.github.io/',
+      'https://buckeroneer.github.io/scib-front-test-santander',
+      'https://buckeroneer.github.io/scib-front-test-santander/',
     ],
     credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'Accept'],
   });
   await app.listen(process.env.PORT ?? 3000);
 }
