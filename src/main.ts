@@ -11,7 +11,13 @@ async function bootstrap() {
     }),
   );
   // Enable CORS
-  app.enableCors();
+  app.enableCors({
+    origin: [
+      'http://localhost:4200', // local dev
+      'https://buckeroneer.github.io/scib-front-test-santander', // deployment
+    ],
+    credentials: true,
+  });
   await app.listen(process.env.PORT ?? 3000);
 }
 bootstrap();
